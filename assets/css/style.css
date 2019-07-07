@@ -1,0 +1,42 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+                        "nav header header header header"
+                        "main main main main sidebar"
+                        "main main main main sidebar"
+                        "footer footer footer footer .";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.header {
+    grid-area: header;
+    background-image: url("../media/440header.jpg");
+    height: 50vh;
+    background-repeat: no-repeat;
+    border: 1em solid lightblue;
+
+}
+
+.nav {
+    grid-area: nav;
+    background-color: gray;
+}
+
+.main {
+    grid-area: main;
+    background-color: blue;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: red;
+    height: 50vh;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
