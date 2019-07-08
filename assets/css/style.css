@@ -1,56 +1,72 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-                        ". header header header map"
+                        "map header header header social"
                         "main main main main nav"
                         "main main main main nav"
-                        "footer footer footer footer .";
+                        "footer footer footer footer footer";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 }
 
-.header {
-    grid-area: header;
+.map {
     background-image: url("../media/440header.jpg");
-    height: 25vh;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
+    border: 2px rgba(67, 79, 59, 0.822) inset;
+
+}
+.header {
+    grid-area: header;
+    height: 10vh;
     padding: 5rem;
     /* border: .5em solid lightblue; */
-    
-
 }
 
 .header h1 {
     padding-top: 0;
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(160, 89, 79, 0.849);
     border-radius: 1em;
+    width: 70%;
     margin: auto auto;
     text-align: center;
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: 'Kanit', sans-serif;
     color: whitesmoke;
     text-shadow: 0 0 3px black;
-    border: rgba(245, 245, 245, 0.438) 2px inset;
+    border: rgba(148, 148, 148, 0.637) 3px inset;
 }
 
 .header h2 {
     text-align: center;
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(0, 0, 0, 0.212);
+    background-color: #645F52;
     color: white;
-    padding-top: 25vh - 20px;
+    width: 30%;
+    margin: auto auto;
+    border-radius: 1em;
+    
 }
+
+.social {
+    grid-area: social;
+    padding: 1em;
+    color: #645F52;
+    font-size: 3em;
+}
+
 .nav {
     grid-area: nav;
-    background-color: gray;
+    border: gray 2px solid;
     height: 50vh;
+    padding: 2rem;
 }
 
 .main {
     grid-area: main;
-    border: blue 5px solid;
+    border: black 2px solid;
+    padding: 3rem;
 }
 
 .footer {
