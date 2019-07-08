@@ -1,9 +1,9 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-                        ". header header header nav"
-                        "main main main main sidebar"
-                        "main main main main sidebar"
+                        ". header header header map"
+                        "main main main main nav"
+                        "main main main main nav"
                         "footer footer footer footer .";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
@@ -12,39 +12,45 @@
 .header {
     grid-area: header;
     background-image: url("../media/440header.jpg");
-    height: 35vh;
+    height: 25vh;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 1rem;
+    padding: 5rem;
     /* border: .5em solid lightblue; */
-    text-align: center;
-    font-size: 3em;
-    font-family: 'Righteous', cursive;
-    color: whitesmoke;
-    text-shadow: 0 0 10px black;
+    
 
 }
 
 .header h1 {
     padding-top: 0;
-    font: outline;
-    background-color: rgba(0, 0, 0, 0.267);
-    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 1em;
+    margin: auto auto;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Kanit', sans-serif;
+    color: whitesmoke;
+    text-shadow: 0 0 3px black;
+    border: rgba(245, 245, 245, 0.438) 2px inset;
 }
 
+.header h2 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    background-color: rgba(0, 0, 0, 0.212);
+    color: white;
+    padding-top: 25vh - 20px;
+}
 .nav {
     grid-area: nav;
     background-color: gray;
+    height: 50vh;
 }
 
 .main {
     grid-area: main;
-    border-color: blue 5px solid;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: red;
-    height: 50vh;
+    border: blue 5px solid;
 }
 
 .footer {
