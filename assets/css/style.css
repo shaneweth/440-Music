@@ -1,72 +1,74 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-                        "map header header header social"
-                        "main main main main nav"
-                        "main main main main nav"
-                        "footer footer footer footer footer";
+                        "header header header header header"
+                        "nav main main main sidebar"
+                        "nav main main main sidebar"
+                        "footer footer footer footer social";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 }
 
 .map {
-    background-image: url("../media/440header.jpg");
+    background-image: url("../media/440header.jpg"); 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     border-radius: 1rem;
     border: 2px rgba(67, 79, 59, 0.822) inset;
-
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    padding: 2rem;
 }
+
+
+
 .header {
     grid-area: header;
-    height: 10vh;
-    padding: 5rem;
-    /* border: .5em solid lightblue; */
+    background-image: repeating-radial-gradient(circle, white, whitesmoke, silver, black, silver);
+    height: 25rem;
+    padding: 1rem;
 }
 
-.header h1 {
-    padding-top: 0;
-    background-color: rgba(160, 89, 79, 0.849);
-    border-radius: 1em;
-    width: 70%;
+.logo {
+    width: 30rem;
+    height: 10rem;
     margin: auto auto;
-    text-align: center;
-    font-size: 3.5em;
-    font-family: 'Kanit', sans-serif;
-    color: whitesmoke;
-    text-shadow: 0 0 3px black;
-    border: rgba(148, 148, 148, 0.637) 3px inset;
-}
-
-.header h2 {
-    text-align: center;
-    font-family: 'Kanit', sans-serif;
-    background-color: #645F52;
-    color: white;
-    width: 30%;
-    margin: auto auto;
-    border-radius: 1em;
-    
 }
 
 .social {
     grid-area: social;
-    padding: 1em;
+    padding: 2rem;
     color: #645F52;
-    font-size: 3em;
+    font-size: 4rem;
+    height: 10rem;
+}
+
+.mapWrapper {
+    width: 9rem;
+    height: 6rem;
 }
 
 .nav {
     grid-area: nav;
     border: gray 2px solid;
     height: 50vh;
-    padding: 2rem;
+}
+
+.nav ul {
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 .main {
     grid-area: main;
     border: black 2px solid;
     padding: 3rem;
+    background-color: black;
 }
 
 .footer {
