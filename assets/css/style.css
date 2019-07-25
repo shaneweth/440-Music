@@ -42,7 +42,6 @@ html {
     /* border-radius: 1rem; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style-type: none;
-    grid-column: 2/3;
 }
 
 .nav li {
@@ -52,7 +51,8 @@ html {
 .nav li a {
     text-decoration: none;
     text-decoration-color: white;
-    text-align: center;
+    text-align: left;
+    letter-spacing: 2px;
     color: white;
     font-size: 1.5rem;
     margin: 2rem;
@@ -112,16 +112,23 @@ html {
 .main {
     grid-area: main;
     border: silver 2px solid;
-    padding: 3rem;
+    padding: 2rem;
     background-color: black;
     display: inherit;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lessons {
+    display: inline-flex;
 }
 
 .profile {
-    border: red 2px solid;
-    width: 10vw;
-    padding: 3rem;
+    height: 8vw;
+    width: 100%;
+    margin: 1rem;
+    font-size: 1vw;
+    font-weight: 100;
     text-align: center;
 }
 
@@ -140,12 +147,12 @@ html {
 }
 
 .soc-wrapper {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     padding: 1rem;
 }
 
-i[class^="icon-"]:before {
-    display: inline-block;
+.fa {
     text-decoration: none;
+    color: white;
 }
