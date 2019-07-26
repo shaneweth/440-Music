@@ -18,17 +18,19 @@ html {
 
 .header {
     grid-area: header;
-    background-image: repeating-radial-gradient(circle, white, whitesmoke, silver, black, silver);
-    height: 25rem;
-    padding: .5em;
+    background-image: repeating-radial-gradient(circle, white, white, silver, black, silver, black, silver, black, silver);
+    height: 20rem;
     border: .8em double silver;
     border-radius: 1rem;
 }
 
 .logo {
-    width: 30rem;
-    height: 10rem;
+    width: 22rem;
+    height: 22rem;
     margin: auto auto;
+    background-color: rgba(255, 255, 255, 0.021);
+    border-radius: 50%;
+    padding: 1rem;
 }
 
 .nav {
@@ -114,12 +116,46 @@ html {
 .main {
     grid-area: main;
     border: silver 2px solid;
+    height: 60rem;
     padding: 2rem;
     background-color: black;
     display: inherit;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.slideshowContainer {
+    max-width: 50em;
+    height: 50em;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+#mySlideshow {
+    max-width: 50em;
+    height: 50em;
+    position: relative;
+    overflow: hidden;
+    border: 1px white solid;
+    border-radius: 5rem;
+  }
+  
+  img {
+    transform: translateY(50em);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .showcase-img {
+    transform: translate(0);
+    transition: 3s;
+  }
+  
+  .showcase-left {
+    transform: translateY(-50em);
+    transition: 3s;
+  }
 
 .lessons {
     display: inline-flex;
