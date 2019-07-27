@@ -22,7 +22,7 @@ html {
 
 .header {
     grid-area: header;
-    background-image: repeating-radial-gradient(circle at left, white, white, white, white, white, silver, black, silver, black, silver, black, silver, black, silver, black, silver, black, silver);
+    background-image: repeating-radial-gradient(circle at left, white, white, white, white, silver, black, silver, black, silver, black, silver, black, silver, black, silver, black);
     border: 5px double silver;
     border-radius: 5px;
     height: 18rem;
@@ -40,23 +40,25 @@ html {
 }
 
 .contact {
-    height: 13rem;
-    width: 13rem;
-    margin-right: 3vw;
-    margin-top: 1em;
-    border: 5px rgba(175, 175, 175, 0.137) solid;
+    width: 16rem;
+    margin-right: 5vw;
+    padding-top: 4rem;
     grid-column: 4;
-    background-color: rgba(0, 0, 0, 0.418);
-    border-radius: 5px;
-    color: rgb(158, 158, 158);
+    background-image: radial-gradient(circle, black, black, rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 10%;
+    color: rgb(212, 212, 212);
 }
 
-.address {
-    margin-top: 3rem;
-}
 .address h3 {
+
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 100;
+    text-align: center;
+}
+
+.address h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
     text-align: center;
 }
 
@@ -175,7 +177,7 @@ html {
     position: relative;
     overflow: hidden;
     border: 6px rgba(126, 126, 126, 0.603) ridge;
-    border-radius: 5rem;
+    /* border-radius: 5rem; */
 }
 
 img {
