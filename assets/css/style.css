@@ -93,49 +93,49 @@ html {
     color: white;
     font-size: 1.3rem;
     transition: .3s;
+
 }
 
 .nav li a:hover {
     color: rgb(187, 225, 240);
     font-size: 1.5rem;
     transition: .3s;
+    text-shadow: 0 0 3px whitesmoke;
 }
 
 .map {
     grid-area: map;
     border-top: rgba(192, 192, 192, 0.315) 2px solid;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .hours {
     background-color: rgba(0, 0, 0, 0.425);
     color: rgba(255, 255, 255, 0.781);
     font-family: 'Source Sans Pro', sans-serif;
+    /* font-size: calc(5px + 0.3vw); */
     padding-top: 3rem;
-    padding-left: 30%;
-    padding-right: 30%;
     padding-bottom: 1rem;
     border-radius: 1rem;
     display: grid;
-    grid-template-columns: 3vw 5vw;
+    grid-template-columns: 1fr 1fr;
 
 }
 
 .hours h1 {
-    font-size: 1.3em;
+    font-size: 1em;
     border-bottom: rgba(192, 192, 192, 0.507) 2px solid;
 }
 
 .hours h2 {
     grid-column: 1;
-    font-size: 1.3em;
+    font-size: 1em;
     margin: auto;
     margin-top: 1rem;
 }
 
 .hours h3 {
     grid-column: 2;
-    font-size: 1.3em;
+    /* font-size: 1.3vmax; */
     margin: auto;
     margin-top: 1rem;
 }
@@ -145,10 +145,10 @@ html {
     background-image: url("../media/440header.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 2em;
+    padding: 1em;
     color: rgb(184, 184, 184);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
 }
 
 .sidebar h3 {
@@ -180,7 +180,7 @@ html {
     overflow: hidden;
     margin: auto auto;
     border: 6px rgba(126, 126, 126, 0.603) ridge;
-    box-shadow: 0 0 2vw whitesmoke;
+    box-shadow: 0 0 1vw whitesmoke;
 }
 
 img {
@@ -205,10 +205,10 @@ img {
     grid-column: 1 / span 3;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
-.profile{
+.profile {
     height: 20rem;
     width: 18rem;
     padding: 3rem;
@@ -253,4 +253,306 @@ img {
     font-size: 3rem;
     color: rgba(255, 0, 0, 0.856);
     transition: 1s;
+    box-shadow: 0 0 1vw whitesmoke;
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "map main main"
+            "sidebar main main"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hours {
+        border-radius: 1rem;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+    }
+
+    .hours h1 {
+        border-bottom: rgba(192, 192, 192, 0.507) 2px solid;
+    }
+
+    .hours h2 {
+        grid-column: 1;
+    }
+
+    .hours h3 {
+        grid-column: 2;
+    }
+
+    .main {
+        grid-area: main;
+        border: rgba(192, 192, 192, 0.315) 2px solid;
+        background-color: black;
+        min-height: 55vh;
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* padding: 5rem; */
+    }
+
+    .slideshowContainer {
+        width: 35vmax;
+        grid-column: 2;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    #mySlideshow {
+        max-width: 40vmax;
+        height: 40vmax;
+        position: relative;
+        overflow: hidden;
+        margin: auto auto;
+        border: 6px rgba(126, 126, 126, 0.603) ridge;
+        box-shadow: 0 0 1vw whitesmoke;
+    }
+
+    img {
+        transform: translateY(50em);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .showcase-img {
+        transform: translate(0);
+        transition: 3s;
+    }
+
+    .showcase-left {
+        transform: translateY(-50em);
+        transition: 3s;
+    }
+
+    .profile {
+        height: 16rem;
+        width: 14rem;
+        padding: 1.6rem;
+        margin: 5px;
+        text-align: center;
+        border: 1px rgb(146, 146, 146) solid;
+        border-radius: 1rem;
+        background-image: linear-gradient(black, rgb(65, 46, 46), silver, rgb(65, 46, 46), black);
+    }
+
+    .profile img {
+        position: relative;
+        transform: translateY(0);
+        height: 8rem;
+        width: 8rem;
+        border: 1px silver ridge;
+        border-radius: 2rem;
+    }
+
+    .soc-wrapper {
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+
+}
+
+@media screen and (max-width: 820px) {
+
+    .grid-container {
+        grid-template-areas: " header header "
+            " nav nav "
+            " map main "
+            " sidebar main "
+            " footer footer ";
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .header {
+        background-image: repeating-radial-gradient(circle at left, silver, white, white, white, white, white, silver, black, silver, black, silver, black, silver, black, silver, black, silver, black);
+        grid-column: 1 / span 2;
+        border: 5px double silver;
+        border-radius: 5px;
+        height: 14rem;
+
+    }
+
+    .logo {
+        width: 16rem;
+        grid-column: 1;
+        margin: .5em;
+        margin-left: 4vw;
+    }
+
+    .contact {
+        width: 13rem;
+        margin-right: 4vw;
+        padding-top: 3rem;
+        grid-column: 2;
+        background-image: radial-gradient(circle, black, black, rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+        border-radius: 5%;
+        color: rgb(223, 223, 223);
+        font-size: 1rem;
+    }
+
+    .address h3 {
+
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 100;
+        font-size: .8em;
+        text-align: center;
+    }
+
+    .address h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        text-align: center;
+    }
+
+
+    .nav {
+        padding-top: .5rem;
+    }
+
+    .nav ul {
+        padding: .3rem;
+    }
+
+    .nav li {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        text-decoration-color: white;
+        text-align: center;
+        letter-spacing: 3px;
+        color: white;
+        font-size: 1.2rem;
+        transition: .3s;
+
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .grid-container {
+        grid-template-areas: " header header "
+            " nav nav "
+            " map main "
+            " sidebar sidebar "
+            " footer footer ";
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .header {
+        height: 9rem;
+        background-image: repeating-radial-gradient(circle at left, white, white, white, white, white, white, white, white, silver, black, silver, black, silver, black, silver, black, silver, black, silver, black);
+
+    }
+
+    .logo {
+        width: 10rem;
+    }
+
+    .contact {
+        width: 9rem;
+        padding-top: 2rem;
+        margin-left: 1.4rem;
+    }
+
+    .address h3 {
+
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 100;
+        font-size: .6em;
+        text-align: center;
+    }
+
+    .address h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .map {
+        padding-top: 0;
+        height: 8rem;
+    }
+    .hours {
+        font-size: .8rem;
+        padding-top: 0;
+    }
+
+    .main {
+        min-height: 50vh;
+    }
+
+    .slideshowContainer {
+        width: 20vmax;
+        padding: .5rem;
+        margin-top: 2rem;
+    }
+
+    #mySlideshow {
+        max-width: 20vmax;
+        height: 20vmax;
+        border: 6px rgba(126, 126, 126, 0.603) ridge;
+        box-shadow: 0 0 1vw whitesmoke;
+    }
+
+    img {
+        transform: translateY(50em);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .showcase-img {
+        transform: translate(0);
+        transition: 3s;
+    }
+
+    .showcase-left {
+        transform: translateY(-50em);
+        transition: 3s;
+    }
+
+    .profile {
+        height: 9rem;
+        width: 6rem;
+        padding: .3rem;
+        margin: 5px;
+        font-size: .5rem;
+        text-align: center;
+        border: 1px rgb(146, 146, 146) solid;
+        border-radius: 1rem;
+        background-image: linear-gradient(black, rgb(65, 46, 46), silver, rgb(65, 46, 46), black);
+    }
+
+    .profile img {
+        position: relative;
+        transform: translateY(0);
+        height: 5rem;
+        width: 5rem;
+        border: 1px silver ridge;
+        border-radius: 1rem;
+    }
+
+
+    .soc-wrapper {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: .8rem;
+    }
 }
