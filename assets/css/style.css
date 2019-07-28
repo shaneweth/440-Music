@@ -388,10 +388,8 @@ img {
     }
 
     .contact {
-        width: 13rem;
-        margin-right: 4vw;
         padding-top: 3rem;
-        grid-column: 2;
+        grid-column: 3;
         background-image: radial-gradient(circle, black, black, rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
         border-radius: 5%;
         color: rgb(223, 223, 223);
