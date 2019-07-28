@@ -267,6 +267,11 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .header {
+        background-image: repeating-radial-gradient(circle at left, white, white, white, white, white, silver, black, silver, black, silver, black, silver, black, silver, black, silver, black);
+
+    }
+
     .hours {
         border-radius: 1rem;
         /* display: grid;
@@ -434,14 +439,9 @@ img {
         transition: .3s;
 
     }
-
-
-
-
-
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
     .grid-container {
         grid-template-areas: " header header "
