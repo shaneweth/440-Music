@@ -258,7 +258,7 @@ img {
     box-shadow: 0 0 1vw whitesmoke;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: white; }
 a:visited { color:rgb(219, 219, 219); }
 a:hover { text-decoration: none; color:white; }
 a:active { text-decoration: none; color:black }
